@@ -7,12 +7,12 @@ Solve and upload SQL problems consistently to improve querying skills.
 
 ## Categories
 - Easy
-- Medium
+- Medium(comming soon)
 - Hard (Coming Soon)
 
 ## Files
 - Easy.sql
-- Medium.sql
+
 
 ## Topics Covered
 - SELECT
@@ -24,5 +24,4 @@ Solve and upload SQL problems consistently to improve querying skills.
 - Subqueries
 - Window Functions
 
-## Progress
-Started with 1 problem a day.
+
