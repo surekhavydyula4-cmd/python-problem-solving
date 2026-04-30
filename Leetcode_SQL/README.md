@@ -24,4 +24,12 @@ Solve and upload SQL problems consistently to improve querying skills.
 - Subqueries
 - Window Functions
 
+## Progress Tracker
+
+| Difficulty | Solved |
+|-----------|---------|
+| Easy      | 1       |
+| Medium    | 0       |
+| Hard      | 0       |
+
 
