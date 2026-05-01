@@ -11,3 +11,15 @@ SELECT p.firstName,
 FROM Person p
 LEFT JOIN Address a
 ON p.personId = a.personId;
+
+-- Day 2 | Question 2
+-- LeetCode #181: Employees Earning More Than Their Managers
+-- Difficulty: Easy
+-- Topic: SELF JOIN
+-- Find employees whose salary is greater than their manager's salary
+
+SELECT e.name AS Employee
+FROM Employee e
+JOIN Employee m
+ON e.managerId = m.id
+WHERE e.salary > m.salary;
