@@ -23,3 +23,14 @@ FROM Employee e
 JOIN Employee m
 ON e.managerId = m.id
 WHERE e.salary > m.salary;
+
+-- Day 3 | Question 3
+-- LeetCode #182: Duplicate Emails
+-- Difficulty: Easy
+-- Topic: GROUP BY, HAVING
+-- Find emails that appear more than once
+
+SELECT email AS Email
+FROM Person
+GROUP BY email
+HAVING COUNT(*) > 1;
