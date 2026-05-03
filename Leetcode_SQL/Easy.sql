@@ -34,3 +34,15 @@ SELECT email AS Email
 FROM Person
 GROUP BY email
 HAVING COUNT(*) > 1;
+
+-- Day 4 | Question 4
+-- LeetCode #183: Customers Who Never Order
+-- Difficulty: Easy
+-- Topic: LEFT JOIN / SUBQUERY
+-- Find customers who never placed any order
+
+SELECT c.name AS Customers
+FROM Customers c
+LEFT JOIN Orders o
+ON c.id = o.customerId
+WHERE o.customerId IS NULL;
