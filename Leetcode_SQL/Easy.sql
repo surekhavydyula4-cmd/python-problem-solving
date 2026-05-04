@@ -46,3 +46,15 @@ FROM Customers c
 LEFT JOIN Orders o
 ON c.id = o.customerId
 WHERE o.customerId IS NULL;
+
+-- Day 5 | Question 5
+-- LeetCode #196: Delete Duplicate Emails
+-- Difficulty: Easy
+-- Topic: SELF JOIN 
+-- Delete duplicate emails, keep smallest id 
+
+DELETE p1
+FROM Person p1
+JOIN Person p2
+ON p1.email = p2.email
+AND p1.id > p2.id;
