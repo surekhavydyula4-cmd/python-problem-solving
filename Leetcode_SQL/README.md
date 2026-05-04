@@ -28,7 +28,7 @@ Solve and upload SQL problems consistently to improve querying skills.
 
 | Difficulty | Solved |
 |-----------|---------|
-| Easy      | 4       |
+| Easy      | 5       |
 | Medium    | 0       |
 | Hard      | 0       |
 
