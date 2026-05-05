@@ -58,3 +58,16 @@ FROM Person p1
 JOIN Person p2
 ON p1.email = p2.email
 AND p1.id > p2.id;
+
+-- Day 6 | Question 6
+-- LeetCode #197: Rising Temperature
+-- Difficulty: Easy
+-- Topic: SELF JOIN / WINDOW FUNCTION
+-- Find ids where today's temperature is higher than yesterday
+
+SELECT w1.id
+FROM Weather w1
+JOIN Weather w2
+ON w1.recordDate = DATE_ADD(w2.recordDate, INTERVAL 1 DAY)
+AND w1.temperature > w2.temperature;
+
