@@ -71,3 +71,17 @@ JOIN Weather w2
 ON w1.recordDate = DATE_ADD(w2.recordDate, INTERVAL 1 DAY)
 AND w1.temperature > w2.temperature;
 
+-- Day 7 | Question 7
+-- LeetCode #511: Game Play Analysis I
+-- Difficulty: Easy
+-- Topic: Window Function (ROW_NUMBER)
+-- Find first login date for each player
+
+SELECT player_id, event_date AS first_login
+FROM (
+    SELECT *,
+           ROW_NUMBER() OVER (PARTITION BY player_id ORDER BY event_date) AS rnk
+    FROM Activity
+) t
+WHERE rnk = 1;
+
