@@ -77,11 +77,8 @@ AND w1.temperature > w2.temperature;
 -- Topic: Window Function (ROW_NUMBER)
 -- Find first login date for each player
 
-SELECT player_id, event_date AS first_login
-FROM (
-    SELECT *,
-           ROW_NUMBER() OVER (PARTITION BY player_id ORDER BY event_date) AS rnk
-    FROM Activity
-) t
-WHERE rnk = 1;
+SELECT player_id,min(event_date) as first_login
+FROM Activity
+GROUP BY player_id;
+
 
