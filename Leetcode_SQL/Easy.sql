@@ -74,7 +74,7 @@ AND w1.temperature > w2.temperature;
 -- Day 7 | Question 7
 -- LeetCode #511: Game Play Analysis I
 -- Difficulty: Easy
--- Topic: Window Function (ROW_NUMBER)
+-- Topic: Aggregation/Window Function (ROW_NUMBER)
 -- Find first login date for each player
 
 SELECT player_id,min(event_date) as first_login
