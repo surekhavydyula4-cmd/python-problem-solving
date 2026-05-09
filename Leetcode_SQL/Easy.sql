@@ -105,3 +105,15 @@ FROM Customer
 WHERE referee_id <> 2
    OR referee_id IS NULL;
 
+-- Day 9 | Question 10
+-- LeetCode #586: Customer Placing the Largest Number of Orders
+-- Difficulty: Easy
+-- Topic: GROUP BY + ORDER BY
+-- Find customer who placed the maximum number of orders
+
+SELECT customer_number
+FROM Orders
+GROUP BY customer_number
+ORDER BY COUNT(*) DESC
+LIMIT 1;
+
