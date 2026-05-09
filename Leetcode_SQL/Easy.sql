@@ -94,3 +94,14 @@ ON e.empId = b.empId
 WHERE b.bonus < 1000
    OR b.bonus IS NULL;
 
+-- Day 9 | Question 9
+-- LeetCode #584: Find Customer Referee
+-- Difficulty: Easy
+-- Topic: WHERE + NULL Handling
+-- Find customers not referred by customer id = 2
+
+SELECT name
+FROM Customer
+WHERE referee_id <> 2
+   OR referee_id IS NULL;
+
