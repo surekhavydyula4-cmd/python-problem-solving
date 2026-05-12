@@ -129,3 +129,14 @@ SELECT name,
 FROM World
 WHERE area >= 3000000
    OR population >= 25000000;
+
+-- Day 10 | Question 12
+-- LeetCode #596. Classes With at Least 5 Students
+-- Difficulty: Easy
+-- Topic: GROUP BY + HAVING
+-- Find all the classes that have at least five students.
+
+SELECT class
+FROM Courses
+GROUP BY class
+HAVING COUNT(*)>=5;
