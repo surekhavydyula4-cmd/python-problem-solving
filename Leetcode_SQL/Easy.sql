@@ -117,3 +117,15 @@ GROUP BY customer_number
 ORDER BY COUNT(*) DESC
 LIMIT 1;
 
+-- Day 10 | Question 11
+-- LeetCode #595: Big Countries
+-- Difficulty: Easy
+-- Topic: WHERE Clause + OR Condition
+-- Find countries with large area or population
+
+SELECT name,
+       population,
+       area
+FROM World
+WHERE area >= 3000000
+   OR population >= 25000000;
