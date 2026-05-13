@@ -157,3 +157,16 @@ WHERE sales_id NOT IN
     ON o.com_id = c.com_id
     WHERE c.name = 'RED'
 );
+
+-- Day 11 | Question 14
+-- LeetCode #610. Triangle Judgement
+-- Difficulty: Easy
+-- Topic: CASE WHEN
+-- Report for every three line segments whether they can form a triangle.
+
+SELECT *,
+CASE 
+WHEN x+y>z AND y+z>x AND x+z>y THEN 'Yes'
+ELSE 'No'
+END AS triangle
+FROM Triangle;
