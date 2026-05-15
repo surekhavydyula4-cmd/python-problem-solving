@@ -170,3 +170,18 @@ WHEN x+y>z AND y+z>x AND x+z>y THEN 'Yes'
 ELSE 'No'
 END AS triangle
 FROM Triangle;
+
+-- Day 12 | Question 15
+-- LeetCode #619. Biggest Single Number
+-- Difficulty: Easy
+-- Topic: Sub query + MAX
+-- Find the largest single number.
+
+
+SELECT MAX(num) AS num
+FROM (
+    SELECT num
+    FROM MyNumbers
+    GROUP BY num
+    HAVING COUNT(*) = 1
+) t;
