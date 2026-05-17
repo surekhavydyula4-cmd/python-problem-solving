@@ -185,3 +185,15 @@ FROM (
     GROUP BY num
     HAVING COUNT(*) = 1
 ) t;
+
+-- Day 13 | Question 16
+-- LeetCode #620. Not Boring Movies
+-- Difficulty: Easy
+-- Topic: Filtering + ORDER BY
+-- Find the movies with an odd-numbered ID and a description that is not "boring".
+
+SELECT *
+FROM Cinema
+WHERE MOD(id,2) <> 0
+AND description <> 'boring'
+ORDER BY rating DESC;
